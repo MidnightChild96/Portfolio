@@ -1,0 +1,57 @@
+/* sets background image of the page and fonts */
+html{
+    background-color: #A9A9A9;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    object-position: center;;
+    background-image: url(graphic/darkbg.jpg);
+    background-size: 100% 100%;
+  }
+
+  /* centers the inputs */
+  body{
+    padding-top: 40px;
+    text-align: center;
+  }
+
+  /*spacing between each div */
+div{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+/*spacing of the inputs */
+  input{
+    padding: 5px 20px;
+  }
+
+  /* sets an image for the top of the table */
+  .header{
+    background-image: url(graphic/user.png);
+    border: 1px solid;
+    height: 300px;
+    background-size: 100% 100%;
+  }
+  
+  /*sets table size and centered. Makes text size x-large and sets borders. */
+  table{
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+    font-size: x-large;
+    border: 1px solid;
+    border-color: white;
+    width: 50%;
+  }
+  
+  /* sets data borders and spacing */
+  td{
+    padding: 20px;
+    border: 1px solid;
+    border-color: white;
+  }
+  
+  /*gives the headers some background color to differentiate the data */
+  .table-header{
+    background-color:	#00008B;
+  }

@@ -1,0 +1,72 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch PersonListView",
+            "request": "launch",
+            "vmArgs": "--module-path C:/Users/kndar/OneDrive/Desktop/CSC 322/Program 5/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "PersonListView",
+            "projectName": "Program 5_8483deae"
+        },
+        {
+            "type": "java",
+            "name": "Launch confused",
+            "request": "launch",
+            "mainClass": "confused",
+            "projectName": "Program 5_8483deae"
+        },
+        {
+            "name": "Java",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ]
+        },
+        {
+            "name": "Java Console App",
+            "type": "java",
+            "request": "launch",
+            "stopOnEntry": true,
+            "jdkPath": "${env:JAVA_HOME}/bin",
+            "cwd": "${fileDirname}",
+            "startupClass": "${fileBasenameNoExtension}",
+            "classpath": [
+                ".",
+                "${fileDirname}"
+            ],
+            "externalConsole": true
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch AnonymousHandlerDemo",
+            "request": "launch",
+            "vmArgs": "--module-path C:/Users/kndar/OneDrive/Desktop/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "AnonymousHandlerDemo",
+            "projectName": "Program 5_8483deae"
+        },
+        {
+            "type": "java",
+            "name": "Launch InvestmentCalculator",
+            "request": "launch",
+            "vmArgs": "--module-path C:/Users/kndar/OneDrive/Desktop/CSC 322/Program 5/javafx-sdk-17.0.0.1/lib --add-modules javafx.controls,javafx.fxml",
+            "mainClass": "InvestmentCalculator",
+            "projectName": "Program 5_8483deae"
+        }
+    ]
+}

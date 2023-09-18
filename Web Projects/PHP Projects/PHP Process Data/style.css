@@ -1,0 +1,89 @@
+/* sets background image of the page and fonts */
+html{
+    background-color: #A9A9A9;
+    color:white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    object-position: center;;
+  }
+
+  /* centers the inputs */
+  body{
+    padding-top: 40px;
+    text-align: center;
+  }
+
+
+
+  .navbar {
+    overflow:visible;
+    background-color: #333;
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    margin-left: -1vw;
+    margin-right: -1vw;
+    z-index: 10;
+  }
+  
+  .navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+
+ .flex-container {
+    display: inline-flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .vertical-flex-container {
+    display: inline-flex;
+    flex-direction: column;
+    background-color: DodgerBlue;
+    width: 100%;
+  }
+
+  .vertical-flex-container div{
+    width: 100%;
+    height: 80px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .item-flex-container{
+    display: inline-flex;
+    flex-direction: row;
+    background-color: rgb(164, 0, 106);
+    height: fit-content;
+  }
+  
+  .item-flex-container div{
+    align-items:center;
+    width: 100%;
+    height: fit-content;
+    margin: 10px;
+    padding: 10px;
+    font-size: 30px;
+  }
+
+  .menuselect{
+    width:100vw;
+  }
+
+  .itemselect{
+    text-align: center;
+    font-size:x-large;
+  }
+
+  option{
+    width: 95vw;
+  }

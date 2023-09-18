@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>Calculator</title>
+        <style>
+            body{
+                align-items: center;
+                text-align: center;
+                background: #F6F3ED;
+                margin: auto;
+                margin-top: auto;
+                padding: 20px;
+                width: 240px;
+                display: flex;
+                flex-direction: column;
+                flex: auto;
+            }
+            .calculator{
+                border-radius: 10px;
+                padding: 10px;
+                border: 1px solid rgb(0, 0, 0);
+                margin: auto;
+                align-items: center;
+                text-align: center;
+                background-color:royalblue;
+            }
+            input[type="text"]{
+                text-align: center;
+                margin: auto;
+                width:215px;
+                height:50px;
+                border-radius: 10px;
+            }
+            input[type="button"]{
+                text-align: center;
+                font-size: 16px;
+                background-color: gray;
+                box-sizing: border-box;
+                width: 50px;
+                height: 50px;
+                border-radius: 10px;
+                border-color: silver;
+                font-weight: bold;
+            }
+            input.memory[type="button"]{
+                    background-color: blueviolet;
+                }
+            input.operator[type="button"]{
+                background-color: orange;
+            }
+            input.clear[type="button"]{
+                background-color: red;
+            }
+            input.equal[type="button"]{
+                background-color: green;
+            }
+            ul { 
+                list-style-type: none;
+                 }
+            .grid-container{
+                display:grid;
+                padding: 10px;
+                grid-template-columns: auto auto auto auto;
+                gap: 5px 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="calculator">
+            <h1>Calculator</h1>
+            <div><input type="text" id="display"></div>
+            <div class="grid-container">
+            <div><input type="button" value="mrc" class="memory"></div>
+            <div><input type="button" value="m+" class="memory"></div>
+            <div><input type="button" value="m-" class="memory"></div>
+            <div><input type="button" onclick="chooseOperation('/')" value="/" class="operator"></div>
+            <div><input type="button" onclick="displayInt(7)" value="7"></div>
+            <div><input type="button" onclick="displayInt(8)" value="8"></div>
+            <div><input type="button" onclick="displayInt(9)" value="9"></div>
+            <div><input type="button" onclick="chooseOperation('*')" value="*" class="operator"></div> 
+            <div><input type="button" onclick="displayInt(4)" value="4"></div>
+            <div><input type="button" onclick="displayInt(5)" value="5"></div>
+            <div><input type="button" onclick="displayInt(6)" value="6"></div>
+            <div><input type="button" onclick="chooseOperation('+')" value="+" class="operator"></div>
+            <div><input type="button" onclick="displayInt(1)" value="1"></div>
+            <div><input type="button" onclick="displayInt(2)" value="2"></div>
+            <div><input type="button" onclick="displayInt(3)" value="3"></div>
+            <div><input type="button" onclick="chooseOperation('-')" value="-" class="operator"></div>
+            <div><input type="button" onclick="displayInt(0)" value="0"></div>
+            <div><input type="button" onclick="displayInt('.')" value="."></div>
+            <div><input type="button" onclick="clear_data()" value="C" class="clear"></div>
+            <div><input type="button" onclick="calculate()" value="=" class="equal"></div>
+            </div>
+        </div>
+        <script>
+            var a = 0;
+            var b = 0;
+            var operand = "";
+            function displayInt(x){
+                if(operand != ""){
+                    document.getElementById("display").value = "";
+                }
+                a = document.getElementById("display").value;
+                a = a.concat(x);
+                document.getElementById("display").value = a;
+            }
+            function chooseOperation(operation){
+                if(operand == ""){
+                    document.getElementById("display").value = "";
+                }
+                else{
+                    calculate();
+                }
+                operand = operation;
+                b = a;
+            }
+            function calculate(){
+                if(operand === '') {return
+                }
+                if(operand == '/'){
+                    a = b/a;
+                }
+                if(operand == '*'){
+                    a = b*a;
+                }
+                if(operand == '+'){
+                    a = parseInt(b) + parseInt(a);
+                }
+                if(operand == '-'){
+                    a = b-a;
+                }
+                document.getElementById("display").value = a;
+            }
+            function clear_data(){
+                a = "";
+                b = "";
+                operand = "";
+                document.getElementById("display").value = a;
+            }
+        </script>
+    </body>
+</html>

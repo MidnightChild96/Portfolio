@@ -1,0 +1,156 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  h2{
+    color:white;
+  }
+  body {
+    width: 100vw;
+    height: 100vh;
+  }
+   
+  form {
+    display: flex;
+    gap: 10px;
+  }
+   
+  #container{
+    margin: 0 0;
+    padding-bottom: 25px;
+    background-image: url("Images/chat.jpg");
+    opacity: 1;
+    width: 100vw;
+    height: 96vh;
+    border: 2px solid #212121;
+    border-radius: 4px;
+  }
+
+  .title{
+      text-align: center;
+  }
+
+   
+  .chatbox {
+    display: grid;
+    grid-template-areas:
+    'channels chat';
+    text-align: left;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    padding: 10px;
+    height: 75vh;
+    width: 95vw;
+    border: 1px solid #a7a7a7;
+    border-radius: 4px;
+    border-bottom: 4px solid #a7a7a7;
+  }
+
+  .channels{
+    text-align: center;
+    border: 2px solid;
+    width:15vw
+  }
+
+  footer{
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+   
+  #Content {
+    flex: 1;
+    border-radius: 4px;
+    border: 1px solid #ff9800;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  #submit{
+    background: #ff9800;
+    border: 2px solid #e65100;
+    padding: 4px 10px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding-right: 10;
+  }
+    .channels{
+      margin: 5px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+
+    .channels h2{
+      padding-top:25px;
+    }
+    .channels ul{
+      list-style-type: none;
+      overflow: hidden;
+      padding-top: 30px;
+    }
+    .channels ul li{
+      border: 1px solid black;
+    }
+
+    .chat{
+      padding-left: 5px;
+      padding-right: 5px;
+      margin: 5px;
+      width:77vw;
+      border:2px solid white;
+      overflow-y: scroll;
+      align-items: center;
+    }
+
+    .message1{
+      padding:10px;
+      color:#000;
+      margin-left:15px;
+      background-color:#6fbced;
+      line-height:20px;
+      max-width:90%;
+      display:inline-block;
+      text-align:left;
+      border-radius:5px;
+      float:right;
+      clear:both;
+    }
+    
+    .message2{
+      padding:10px;
+      color:#000;
+      margin-left:15px;
+      background-color:#58b666;
+      line-height:20px;
+      max-width:90%;
+      contain: content;
+      display:inline-block;
+      text-align:left;
+      border-radius:5px;
+      clear:both
+    }
+
+    .triangle1{
+      width: 0;
+      height: 0;
+      border-style: solid;
+      border-width: 0 8px 8px 8px;
+      border-color: transparent
+      transparent #6fbced transparent;
+      margin-right:20px;
+      float:right;
+      clear:both;
+  }
+
+  .triangle2{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 8px 8px 8px;
+    border-color: transparent
+    transparent #58b666 transparent;
+    margin-left:20px;
+    clear:both
+}
+
+

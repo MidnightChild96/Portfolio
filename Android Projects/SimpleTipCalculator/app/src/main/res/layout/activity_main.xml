@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:visibility="visible">
+
+    <TextView
+        android:id="@+id/billLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="15dp"
+        android:text="Bill: $"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tipPercent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Tip (%)"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/billLabel" />
+
+    <TextView
+        android:id="@+id/Splittext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:text="Split"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tipPercent" />
+
+    <EditText
+        android:id="@+id/billInput"
+        android:layout_width="270dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="5dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/billLabel"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/tipInput"
+        android:layout_width="265dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/tipPercent"
+        app:layout_constraintTop_toBottomOf="@+id/billInput" />
+
+    <EditText
+        android:id="@+id/splitInput"
+        android:layout_width="275dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toEndOf="@+id/Splittext"
+        app:layout_constraintTop_toBottomOf="@+id/tipInput" />
+
+    <Button
+        android:id="@+id/calculateButton"
+        android:layout_width="125dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Calculate"
+        app:layout_constraintBottom_toTopOf="@+id/tipHeader"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Splittext" />
+
+    <Button
+        android:id="@+id/shareButton"
+        android:layout_width="90dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:text="Share"
+        app:layout_constraintBottom_toTopOf="@+id/tipHeader"
+        app:layout_constraintEnd_toStartOf="@+id/copyButton"
+        app:layout_constraintStart_toEndOf="@+id/calculateButton"
+        app:layout_constraintTop_toBottomOf="@+id/Splittext" />
+
+    <Button
+        android:id="@+id/copyButton"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="Copy Result"
+        app:layout_constraintBottom_toTopOf="@+id/tipHeader"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Splittext" />
+
+    <TextView
+        android:id="@+id/tipHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="Tip Amount : $"
+        app:layout_constraintBottom_toTopOf="@+id/totalHeader"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/totalHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="30dp"
+        android:text="Total with Tip: $"
+        app:layout_constraintBottom_toTopOf="@+id/splitHeader"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/splitHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="20dp"
+        android:text="Each Person Pays: $"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tipOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/totalOutput"
+        app:layout_constraintStart_toEndOf="@+id/tipHeader" />
+
+    <TextView
+        android:id="@+id/totalOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/splitOutput"
+        app:layout_constraintStart_toEndOf="@+id/totalHeader" />
+
+    <TextView
+        android:id="@+id/splitOutput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/splitHeader" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

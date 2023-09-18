@@ -1,0 +1,42 @@
+DROP DATABASE IF EXISTS company;
+
+CREATE DATABASE company;
+
+CREATE TABLE manager(
+        managerid INT AUTO_INCREMENT PRIMARY KEY,
+        manager VARCHAR(255),
+        department VARCHAR(255));
+
+CREATE TABLE manufacturer(
+        manufacturerid int AUTO_INCREMENT PRIMARY KEY,
+        manufacturer varchar(255),
+        website varchar(255));
+
+CREATE TABLE datatable(
+    id int AUTO_INCREMENT PRIMARY KEY,
+    product varchar(255),
+    color varchar(255),
+    price float,
+    quantity int,
+    page varchar(255),
+    managerid INT,
+    manufacturerid INT,
+    FOREIGN KEY(managerid) REFERENCES manager(managerid),
+    FOREIGN KEY(manufacturerid) REFERENCES manufacture r(manufacturerid));
+
+    INSERT INTO manager(manager, department) VALUES ('Michael Howard', 'Bath');
+    INSERT INTO manager(manager, department) VALUES ('John Fritz', 'Kitchen');
+    INSERT INTO manager(manager, department) VALUES ('Liz Tabor', 'Bedbroom');
+
+    INSERT INTO manufacturer(manufacturer, website) VALUES ('Cannon', 'http://www.cannonhome.com/');
+    INSERT INTO manufacturer(manufacturer, website) VALUES ('InterDesign', 'http://www.interdesignusa.com/');
+    INSERT INTO manufacturer(manufacturer, website) VALUES ('LinenSpa', 'http://www.interdesignusa.com/');
+
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Bath Towel', 'Black', '5.75', '75', 'http://MyStore.com/bathtowel.php', '1', '1');
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Wash Cloth', 'White', '0.99', '225', 'http://MyStore.com/washcloth.php', '1', '1');
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Shower Curtain', 'White', '11.99', '73', 'http://MyStore.com/showercurtain.php', '1', '2');
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Pantry Organizer', 'Clear', '3.99', '52', 'http://MyStore.com/pantryorganizer.php', '2', '2');
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Storage Jar', 'Clear', '5.99', '18', 'http://MyStore.com/pantryorganizer.php', '2', '2');
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Firm Pillow', 'White', '12.99', '24', 'http://MyStore.com/pillow.php', '3', '1');
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Comforter', 'White', '34.99', '12', 'http://MyStore.com/comforter.php', '3', '3');
+    INSERT INTO datatable(product, color, price, quantity, page, managerid, manufacturerid) VALUES ('Rollaway Bed', 'Black', '249.99', '3', 'http://MyStore.com/rollaway.php', '3', '3');

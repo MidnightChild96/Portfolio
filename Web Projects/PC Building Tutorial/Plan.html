@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" >
+        <title>Planning Phase</title>
+        <style>
+            body{
+                background-image: url("graphics/budget.jfif");
+                font-size: 30px;
+            }
+            .top{
+                text-align: center;
+            }
+            .main{
+                text-align: center;
+            }
+            ul,ol{
+                list-style: none;
+            }
+            input[type="text"]{
+                text-align: center;
+                margin: auto;
+            }
+            li{
+                margin: 0px 50px;
+            }
+            .left{
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+            <div class="top">
+                <h1>Planning Phase</h1>
+                <p>
+                </p>
+            </div>
+            <div class="left">
+
+            </div>
+            <div class="main">
+                <div><input type="text" id="display"></div>
+                <div><input type="button" onclick="calculate()" value="Calculate" class="calculate"></div>
+                <div>
+                    <ul>
+                        <li>CPU: $<input type="text" id="processor"></li>
+                        <li>Motherboard: $<input type="text" id="motherboard"></li>
+                        <li>RAM: $<input type="text" id="ram"></li>
+                        <li>Graphics Card: $<input type="text" id="graphics"></li>
+                        <li>Storage: $<input type="text" id="storage"></li>
+                        <li>Power Supply: $<input type="text" id="power-supply"></li>
+                        <li>Case: $<input type="text" id="case"></li>
+                    </ul>
+                </div>
+            </div>
+            <div>
+                <p> The values are a rough estimate for what the cost of each part should be and is not an exact value. Generally the ratio the 
+                    calculated is for a well rounded computer with a CPU equally as powerful as the graphics card. Of course the price will vary depending 
+                    on the purpose of the computer. This is not a final answer on the perfect computer, but a starting point on what an individual should 
+                    budget out for.
+            </div>
+            <div class="left">
+                <h2>Navigation</h2>
+                <ol>
+                    <li style="display: inline"><a href="Intro.html">Introduction to Building a Computer</a></li>
+                    <li style="display: inline"><a href="Parts.html">What Parts Are Needed?</a></li>
+                    <li style="display: inline"><a href="Assemble.html">Time to Assemble!</a></li>
+                    <li style="display: inline"><a href="Software.html">Starting Up Your Computer!</a></li>
+                </ol>
+            </div>
+        <script>
+            var budget;
+            var cpu;
+            var mb;
+            var gc;
+            var memory;
+            var disk;
+            var ps;
+            var c;
+            function calculate(){
+                budget=document.getElementById("display").value;
+                cpu=budget*0.30;
+                gc=budget*0.30;
+                mb=budget*0.08
+                memory=budget*0.08;
+                disk=budget*0.1;
+                ps=budget*0.06;
+                c=budget*0.08;
+                document.getElementById("processor").value = cpu;
+                document.getElementById("motherboard").value = mb;
+                document.getElementById("ram").value = memory;
+                document.getElementById("graphics").value = gc;
+                document.getElementById("storage").value = disk;
+                document.getElementById("power-supply").value = ps;
+                document.getElementById("case").value = c;
+            }
+        </script>  
+    </body>
+</html>
