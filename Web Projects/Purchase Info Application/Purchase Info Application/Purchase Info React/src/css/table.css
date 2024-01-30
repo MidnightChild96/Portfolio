@@ -1,0 +1,25 @@
+﻿table{
+    margin: auto;
+    width: 75%;
+    border: 1px solid;
+    color: black;
+}
+
+table td{
+    border: 1px solid;
+}
+
+table th{
+    border: 1px solid;
+}
+
+.btn-link {
+    background: none;
+    color: white;
+    text-decoration: underline;
+    border: none;
+    background-color: none;
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
